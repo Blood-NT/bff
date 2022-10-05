@@ -181,28 +181,28 @@
 
 
 
-body:hover .cube2 #front {
+.birthday:hover .cube2 #front {
     transform: translateZ(180px) rotateY(360deg);
 
 }
 
-body:hover .cube2 #back {
+.birthday:hover .cube2 #back {
     transform: translateZ(-180px) rotateY(360deg);
 }
 
-body:hover .cube2 #left {
+.birthday:hover .cube2 #left {
     right: 180px
 }
 
-body:hover .cube2 #right {
+.birthday:hover .cube2 #right {
     left: 180px
 }
 
-body:hover .cube2 #top {
+.birthday:hover .cube2 #top {
     bottom: 180px
 }
 
-body:hover .cube2 #bottom {
+.birthday:hover .cube2 #bottom {
     top: 180px
 }
 
@@ -243,21 +243,32 @@ body:hover .cube2 #bottom {
 
 
 html,
-body {
+.birthday {
     height: 100%;
     touch-action: none;
 }
 
-body {
+.birthday {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: linear-gradient(rgb(2, 73, 255), rgb(2, 217, 255));
+    background-color: rgba(0, 0, 0, 0.3);
     -webkit-perspective: 1000px;
     perspective: 1000px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    opacity: 1;
 }
 
 #drag-container,
@@ -395,4 +406,29 @@ body {
 #modal_body img {
     width: 640px;
     height: 805px;
+}
+
+
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-image: linear-gradient(bottom, rgb(105, 173, 212) 0%, rgb(23, 82, 145) 84%);
+    background-image: -o-linear-gradient(bottom, rgb(105, 173, 212) 0%, rgb(23, 82, 145) 84%);
+    background-image: -moz-linear-gradient(bottom, rgb(105, 173, 212) 0%, rgb(23, 82, 145) 84%);
+    background-image: -webkit-linear-gradient(bottom, rgb(105, 173, 212) 0%, rgb(23, 82, 145) 84%);
+    background-image: -ms-linear-gradient(bottom, rgb(105, 173, 212) 0%, rgb(23, 82, 145) 84%);
+
+    background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(0, rgb(105, 173, 212)),
+            color-stop(0.84, rgb(23, 82, 145)));
 }

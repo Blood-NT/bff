@@ -10,34 +10,37 @@
 </head>
 
 <body>
-
-
-
-    <div id="drag-container">
-        <div id="spin-container">
-            <!-- Add your images (or video) here -->
-            <img onclick='zoomm("img/all.jpg"   )' class="imggg" src="img/all.jpg" alt="">
-            <img onclick='zoomm("img/long01.jpg")' class="imggg" src="img/long01.jpg" alt="">
-            <img onclick='zoomm("img/tanh01.jpg")' class="imggg" src="img/tanh01.jpg" alt="">
-            <img onclick='zoomm("img/khai01.jpg")' class="imggg" src="img/khai01.jpg" alt="">
-            <img onclick='zoomm("img/kien01.jpg")' class="imggg" src="img/kien01.jpg" alt="">
-            <img onclick='zoomm("img/ak.jpg")' class="imggg" src="img/ak.jpg" alt="">
-            <img onclick='zoomm("img/long02.jpg")' class="imggg" src="img/long02.jpg" alt="">
-            <img onclick='zoomm("img/tanh02.jpg")' class="imggg" src="img/tanh02.jpg" alt="">
-            <img onclick='zoomm("img/khai02.png")' class="imggg" src="img/khai02.png" alt="">
-            <img onclick='zoomm("img/kien02.png")' class="imggg" src="img/kien02.png" alt="">
-            <img onclick='zoomm("img/all02.jpg")' class="imggg" src="img/all02.jpg" alt="">
-            <p>nolan</p>
-        </div>
-        <div id="ground"></div>
+    <div id="laroi">
+        <canvas id="canvas"></canvas>
     </div>
+    <div class="birthday">
 
-    <div id="modal" style="display: none;">
-        <div id="modal_body">
+
+        <div id="drag-container">
+            <div id="spin-container">
+                <!-- Add your images (or video) here -->
+                <img onclick='zoomm("img/all.jpg"   )' class="imggg" src="img/all.jpg" alt="">
+                <img onclick='zoomm("img/long01.jpg")' class="imggg" src="img/long01.jpg" alt="">
+                <img onclick='zoomm("img/tanh01.jpg")' class="imggg" src="img/tanh01.jpg" alt="">
+                <img onclick='zoomm("img/khai01.jpg")' class="imggg" src="img/khai01.jpg" alt="">
+                <img onclick='zoomm("img/kien01.jpg")' class="imggg" src="img/kien01.jpg" alt="">
+                <img onclick='zoomm("img/ak.jpg")' class="imggg" src="img/ak.jpg" alt="">
+                <img onclick='zoomm("img/long02.jpg")' class="imggg" src="img/long02.jpg" alt="">
+                <img onclick='zoomm("img/tanh02.jpg")' class="imggg" src="img/tanh02.jpg" alt="">
+                <img onclick='zoomm("img/khai02.png")' class="imggg" src="img/khai02.png" alt="">
+                <img onclick='zoomm("img/kien02.png")' class="imggg" src="img/kien02.png" alt="">
+                <img onclick='zoomm("img/all02.jpg")' class="imggg" src="img/all02.jpg" alt="">
+                <p>nolan</p>
+            </div>
+            <div id="ground"></div>
         </div>
-    </div>
 
-    <!-- <div class="bgcube1">
+        <div id="modal" style="display: none;">
+            <div id="modal_body">
+            </div>
+        </div>
+
+        <!-- <div class="bgcube1">
         <div class="cube1">
             <img src="img/01.jpg" alt="" class="imgg">
             <img src="img/02.jpg" alt="" class="imgg">
@@ -60,6 +63,7 @@
 
         </div>
     </div> -->
+    </div>
 
 </body>
 <script src="main.js"></script>
