@@ -284,6 +284,21 @@ html,
     transform: rotateX(0deg);
 }
 
+#spin-container p {
+    font-size: 100px;
+}
+
+#spin-container {
+    width: 240px;
+    height: 340px;
+}
+
+#ground {
+    width: 540px;
+    height: 540px;
+}
+
+
 #drag-container img {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -576,4 +591,42 @@ canvas {
     left: 65%;
     -webkit-animation-delay: 4s, 2.5s;
     animation-delay: 4s, 2.5s
+}
+
+
+
+@media screen and (max-width: 1300px) {
+    body {
+        background-image: linear-gradient(rgb(105, 173, 212), rgb(23, 82, 145));
+
+    }
+
+    #canvas {
+        display: none;
+    }
+
+    .snowflakes {
+        /* display: none; */
+    }
+
+    #spin-container {
+        width: 120px;
+        height: 170px;
+    }
+
+    #ground {
+        width: 140px;
+        height: 140px;
+    }
+
+    #modal_body {
+        top: 50px;
+        position: relative;
+    }
+
+    #modal_body img {
+        width: 240px;
+        height: 340px;
+    }
+
 }

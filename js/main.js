@@ -8,7 +8,12 @@ var imgHeight = 340; // height of images (unit: px)
 
 var check = false;
 // ===================== start =======================
+
 // animation start after 1000 miliseconds
+if (screen.width < 1300)
+    radius = 250;
+else
+    radius = 540;
 setTimeout(init, 1000);
 
 var odrag = document.getElementById('drag-container');
@@ -18,21 +23,24 @@ var aVid = ospin.getElementsByTagName('video');
 var aEle = [...aImg, ...aVid]; // combine 2 arrays
 var imgg = document.getElementsByClassName("imggg");
 
-// Size of images
-ospin.style.width = imgWidth + "px";
-ospin.style.height = imgHeight + "px";
+// // Size of images
+// ospin.style.width = imgWidth + "px";
+// ospin.style.height = imgHeight + "px";
 
 // Size of ground - depend on radius
 var ground = document.getElementById('ground');
-ground.style.width = radius * 1 + "px";
-ground.style.height = radius * 1 + "px";
+// ground.style.width = radius * 1 + "px";
+// ground.style.height = radius * 1 + "px";
 
 function init(delayTime) {
+    var audiobg = new Audio('audio/okkk.mp3');
+    audiobg.play()
     for (var i = 0; i < aEle.length; i++) {
         aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
         aEle[i].style.transition = "transform 1s";
         aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
     }
+
 }
 
 if (autoRotate) {
